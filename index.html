@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marwan Zayed · Automotive Engineer</title>
+<meta name="description" content="Automotive engineering graduate focused on manufacturing, composites and maintenance planning. BMW Group placement, Formula Student composites, MSc Automotive Engineering (EVs).">
+<meta name="theme-color" content="#0E1116">
+<meta property="og:title" content="Marwan Zayed · Automotive Engineer">
+<meta property="og:description" content="Manufacturing, composites and maintenance planning portfolio.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E1116'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-weight='700' font-size='28' text-anchor='middle' fill='%232DD4BF'%3EMZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1116; --surface:#151A21; --surface-2:#1B222B; --text:#E8ECF1; --muted:#8E99A8; --border:#232A34;
+  --accent:#2DD4BF; --ink:#03201C; --chip:#C3CCD8;
+  --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 420px at 80% -80px,rgba(45,212,191,.07),transparent 70%)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+.label{font:400 10.5px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.gold{color:var(--accent)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,17,22,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;white-space:nowrap}
+.brand b{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--border);border-radius:8px;font:500 11px var(--mono);color:var(--accent);background:var(--surface)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{font:400 10.7px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+nav a:hover,nav a.active{color:var(--accent)}
+.tools{display:flex;align-items:center;gap:10px}
+.pill-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;font:500 10.9px var(--mono);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border);transition:.2s;white-space:nowrap}
+.pill-btn.solid{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+.pill-btn.solid:hover{filter:brightness(1.08)}
+.pill-btn.line:hover{border-color:var(--accent);color:var(--accent)}
+.circle{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--border);font:500 11px var(--mono);color:var(--muted);transition:.2s}
+.circle:hover{border-color:var(--accent);color:var(--accent)}
+.menu{display:none;background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;width:38px;height:34px;cursor:pointer;font-size:1rem}
+
+/* hero */
+.hero{padding:150px 0 70px}
+.eyebrow{font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-size:clamp(3.1rem,9vw,5.9rem);line-height:1;font-weight:700;letter-spacing:-.035em;margin:22px 0 26px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{max-width:600px;color:var(--muted);font-size:1.12rem;line-height:1.6}
+.hero .lead strong{color:var(--text);font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.cta .pill-btn{padding:14px 24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:72px;padding-top:22px;border-top:1px solid var(--border)}
+.stat .v{font-size:1.9rem;font-weight:700;line-height:1.2;margin-top:8px;letter-spacing:-.01em}
+.stat .v small{font-size:.9rem;color:var(--muted)}
+
+/* sections */
+section{padding:84px 0}
+.sh{display:flex;align-items:center;gap:16px;margin-bottom:36px}
+.sh .n{font:400 10px var(--mono);color:var(--muted);align-self:flex-end;padding-bottom:12px}
+.sh h2{font-size:clamp(1.9rem,4vw,2.3rem);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.sh::after{content:"";flex:1;height:1px;background:var(--border);margin-top:14px}
+
+.about .lead-b{font-weight:600;margin-bottom:16px}
+.about p{color:var(--muted);max-width:820px;margin-bottom:16px}
+.about p strong{color:var(--text);font-weight:600}
+
+/* skills table */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.cell{background:var(--surface);padding:24px}
+.cell .label{color:var(--accent);margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font:400 11px var(--mono);padding:4px 9px;border:1px solid var(--border);border-radius:4px;color:var(--chip);background:rgba(255,255,255,.015)}
+
+/* projects */
+.feature{display:grid;grid-template-columns:42% 1fr;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:var(--surface)}
+.media{position:relative;min-height:380px;background:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px) 0 0/32px 32px,#0b0e12;overflow:hidden}
+.gallery{position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.gal-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:rgba(14,17,22,.78);color:var(--text);cursor:pointer;font-size:1.2rem;line-height:1;display:none}
+.gal-btn.prev{left:12px}.gal-btn.next{right:12px}
+.gallery-on .gal-btn{display:block}
+.art{position:absolute;inset:0;width:100%;height:100%}
+.art .ln{fill:none;stroke:#8a97a8;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.art .thick{stroke-width:5}
+.art .ac{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.art .thin{stroke:#4a5568;stroke-width:1.2}
+.art .f1{fill:#1c232d}.art .f2{fill:#283140}.art .f3{fill:#3d485a}.art .fa{fill:var(--accent)}
+.art .tx{fill:#7d8aa0;font:500 11px var(--mono);letter-spacing:.14em}
+.art .tx2{fill:#a9b4c4;font:400 14px var(--mono)}
+.fbody{padding:38px 40px;display:flex;flex-direction:column}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(45,212,191,.45);color:var(--accent);border-radius:999px;padding:6px 14px;font:500 10px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.fbody h3{font-size:1.75rem;line-height:1.22;font-weight:500;letter-spacing:-.015em;margin:20px 0 14px}
+.fbody p{color:var(--muted);font-size:.98rem;margin-bottom:12px}
+.metrics{display:flex;gap:44px;flex-wrap:wrap;border-top:1px solid var(--border);margin-top:auto;padding-top:20px}
+.metrics .v{font-size:1.15rem;font-weight:600;color:var(--accent);margin-top:6px}
+.fbody .chips{margin-top:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;transition:.25s}
+.card:hover{border-color:rgba(45,212,191,.45);transform:translateY(-2px)}
+.card .label{color:var(--accent)}
+.card h3{font-size:1.15rem;line-height:1.3;font-weight:600;letter-spacing:-.01em;margin:12px 0 10px}
+.card p{color:var(--muted);font-size:.9rem;line-height:1.55;margin-bottom:16px}
+.card .chips{margin-top:auto}
+/* experience */
+.xps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.xp{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px}
+.xp.full{grid-column:1/-1}
+.xp h3{font-size:1.2rem;font-weight:600;letter-spacing:-.01em;padding-right:150px;line-height:1.3}
+.xp .co{font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:8px 0 4px}
+.xp .when{font:400 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.xp ul{list-style:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--border);display:grid;gap:10px}
+.xp li{color:var(--muted);font-size:.93rem;line-height:1.55;padding-left:18px;position:relative}
+.xp li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+.logo{position:absolute;top:22px;right:22px;width:124px;height:64px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:9px 12px}
+.logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.logo span{display:none;font:500 12px var(--mono);color:var(--ink)}
+.logo.nologo{background:var(--surface-2);border:1px solid var(--border)}
+.logo.nologo img{display:none}
+.logo.nologo span{display:block;color:var(--accent)}
+
+/* education */
+.edus{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.edu{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px}
+.edu h3{font-size:1.35rem;font-weight:600;letter-spacing:-.015em;line-height:1.25;padding-right:164px}
+.edu .inst{color:var(--muted);margin:6px 0 4px}
+.edu .when{font:400 10.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.estats{display:flex;gap:36px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
+.estats .v{margin-top:6px;font-size:1.05rem}
+.estats .v.g{color:var(--accent)}
+.edu .logo{width:136px;height:70px}
+.enote{color:var(--muted);font-size:.9rem;margin-top:18px}
+
+/* contact */
+.contact{padding:96px 0 70px}
+.contact h2{font-size:clamp(2.3rem,5.5vw,3.4rem);font-weight:700;letter-spacing:-.035em;line-height:1.1;margin:16px 0 22px}
+.contact h2 em{font-style:normal;color:var(--accent)}
+.mail{display:inline-block;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:3px;margin-bottom:28px;transition:.2s}
+.mail:hover{color:var(--accent);border-color:var(--accent)}
+.contact .cta{margin-top:0}
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer span{font:400 10px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.card{transition:none}}
+
+@media (max-width:1000px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  nav ul{gap:16px}
+}
+@media (max-width:860px){
+  section{padding:64px 0}
+  .menu{display:block}
+  nav{position:absolute;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:6px 24px 14px}
+  nav li a{display:block;padding:13px 0;border-bottom:1px solid var(--border)}
+  .tools .circle{display:none}
+  .hero{padding-top:120px}
+  .stats{grid-template-columns:repeat(2,1fr);row-gap:28px}
+  .skills{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr}
+  .media{min-height:260px}
+  .fbody{padding:28px 24px}
+  .xps,.edus{grid-template-columns:1fr}
+  .metrics{gap:28px}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+<script>function logoFail(i){if(!i.dataset.tried&&i.dataset.remote){i.dataset.tried='1';i.src=i.dataset.remote;}else{i.parentNode.classList.add('nologo');}}</script>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap bar">
+    <a href="#top" class="brand"><b>MZ</b><span>Marwan Zayed</span></a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <a class="circle" href="https://linkedin.com/in/marwan-zayed-b208a0258" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Automotive Engineer &middot; Manufacturing &middot; Composites &middot; Maintenance</p>
+    <h1>Marwan <em>Zayed</em></h1>
+    <p class="lead">Automotive engineering graduate turning <strong>data and first-principles thinking into practical manufacturing and maintenance decisions</strong>, from Power BI maintenance dashboards at BMW Group to composite fracture research and Formula Student CFRP parts.</p>
+    <div class="cta">
+      <a class="pill-btn solid" href="#projects">View projects</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="label">Bachelors</div><div class="v">BEng <small>(Hons)</small></div></div>
+      <div class="stat"><div class="label">Classification</div><div class="v">2:1</div></div>
+      <div class="stat"><div class="label">Masters &middot; in progress</div><div class="v">MSc <small>EVs</small></div></div>
+      <div class="stat"><div class="label">BMW placement</div><div class="v">13 <small>months</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about reveal">
+  <div class="wrap">
+    <div class="sh"><span class="n">01</span><h2>About</h2></div>
+    <p class="lead-b">Hands-on, data-led, curious.</p>
+    <p>I'm an automotive engineer with a practical approach to engineering problems: <strong>start from first principles, check the data, then get hands-on</strong>. My placement within BMW Group's Swindon / Oxford operations gave me real exposure to maintenance planning, KPI tracking and reducing unplanned downtime on a live production site.</p>
+    <p>Alongside my studies I design and manufacture carbon-fibre parts for the Formula Student car, which builds directly on my research into aluminium&ndash;CFRP adhesive and hybrid joints.</p>
+    <p>I'm looking for a graduate role in <strong>manufacturing, maintenance or quality</strong> within a high-performance automotive or motorsport environment, where precision and continuous improvement matter.</p>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="wrap">
+    <div class="sh"><span class="n">02</span><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="cell"><div class="label">Maintenance &amp; Reliability</div><div class="chips"><span class="chip">Maintenance planning</span><span class="chip">KPI tracking</span><span class="chip">Root-cause analysis</span><span class="chip">Downtime reduction</span></div></div>
+      <div class="cell"><div class="label">Data &amp; Reporting</div><div class="chips"><span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">Technical reporting</span><span class="chip">PowerPoint</span></div></div>
+      <div class="cell"><div class="label">CAD &amp; CAE</div><div class="chips"><span class="chip">SolidWorks</span><span class="chip">CATIA V5</span><span class="chip">Fusion 360</span><span class="chip">ABAQUS</span><span class="chip">MATLAB</span><span class="chip">Simulink</span></div></div>
+      <div class="cell"><div class="label">Composites &amp; Manufacturing</div><div class="chips"><span class="chip">CFRP layup</span><span class="chip">Vacuum bagging</span><span class="chip">Oven curing</span><span class="chip">Inspection</span><span class="chip">Design for manufacture</span></div></div>
+      <div class="cell"><div class="label">Engineering Fundamentals</div><div class="chips"><span class="chip">Statics &amp; dynamics</span><span class="chip">Materials</span><span class="chip">Fracture mechanics</span><span class="chip">Experimental data processing</span></div></div>
+      <div class="cell"><div class="label">Additional Development</div><div class="chips"><span class="chip">Composite Design in F1</span><span class="chip">Numerical Methods in CFD</span><span class="chip">Vehicle Dynamics Modelling</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="wrap">
+    <div class="sh"><span class="n">03</span><h2>Projects</h2></div>
+
+    <article class="feature">
+      <div class="media">
+        <svg class="art" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Schematic of a mixed-mode bending test on an aluminium-CFRP adhesive joint">
+          <line class="ln thick" x1="170" y1="110" x2="640" y2="110"/>
+          <line class="ac" x1="400" y1="36" x2="400" y2="92"/><polygon class="fa" points="400,106 391,90 409,90"/>
+          <line class="ln" x1="400" y1="112" x2="400" y2="168"/><line class="ln" x1="170" y1="112" x2="170" y2="168"/>
+          <circle class="f1 ln" cx="640" cy="110" r="8"/><line class="ln" x1="640" y1="118" x2="640" y2="168"/>
+          <rect class="f2 ln" x="160" y="170" width="480" height="36"/>
+          <line class="thin" x1="160" y1="179" x2="640" y2="179"/><line class="thin" x1="160" y1="188" x2="640" y2="188"/><line class="thin" x1="160" y1="197" x2="640" y2="197"/>
+          <rect class="fa" x="260" y="206" width="380" height="6"/>
+          <line class="ln" style="stroke-dasharray:4 4" x1="160" y1="209" x2="256" y2="209"/>
+          <polygon class="fa" points="254,209 272,200 272,218"/>
+          <rect class="f3 ln" x="160" y="212" width="480" height="36"/>
+          <polygon class="f1 ln" points="215,248 197,278 233,278"/><polygon class="f1 ln" points="585,248 567,278 603,278"/>
+          <line class="ln" x1="150" y1="278" x2="650" y2="278"/>
+          <path class="ln" style="stroke-width:1.2" d="M160,300 L260,300 M160,293 L160,307 M260,293 L260,307"/>
+          <text class="tx2" x="198" y="326">a&#8320;</text>
+          <text class="tx" x="662" y="193">CFRP</text><text class="tx" x="662" y="214">ADHESIVE</text><text class="tx" x="662" y="238">ALUMINIUM</text>
+          <text class="tx" x="24" y="380">SCHEMATIC &#183; MIXED-MODE BENDING TEST</text>
+        </svg>
+        <div class="gallery" id="gallery">
+          <img src="assets/images/msc-1.jpg" alt="MSc dissertation test specimens" onerror="this.remove()">
+          <img src="assets/images/msc-2.jpg" alt="MSc dissertation test rig" onerror="this.remove()">
+          <img src="assets/images/msc-3.jpg" alt="MSc dissertation fracture surface" onerror="this.remove()">
+          <img src="assets/images/msc-4.jpg" alt="MSc dissertation results" onerror="this.remove()">
+        </div>
+        <button class="gal-btn prev" aria-label="Previous photo">&#8249;</button><button class="gal-btn next" aria-label="Next photo">&#8250;</button>
+      </div>
+      <div class="fbody">
+        <span class="pill">MSc Dissertation</span>
+        <h3>Mixed-Mode Fracture of Al&ndash;CFRP Adhesive Joints</h3>
+        <p>Investigated aluminium&ndash;CFRP adhesive joints under mixed-mode loading for lightweight automotive and aviation structures, using Mixed-Mode Bending (MMB) testing and fitting the Benzeggagh&ndash;Kenane (B&ndash;K) criterion.</p>
+        <p>It builds directly on my BEng research into Mode II fracture of hybrid joints.</p>
+        <div class="metrics">
+          <div><div class="label">Test</div><div class="v">Mixed-Mode Bending</div></div>
+          <div><div class="label">Model</div><div class="v">B&ndash;K criterion</div></div>
+          <div><div class="label">Application</div><div class="v">Automotive &amp; aviation</div></div>
+        </div>
+        <div class="chips"><span class="chip">Adhesive joints</span><span class="chip">CFRP</span><span class="chip">MMB testing</span><span class="chip">Fracture mechanics</span></div>
+      </div>
+    </article>
+
+    <div class="cards">
+      <article class="card">
+        <div class="label">BEng Final Year Project</div>
+        <h3>Mode II Fracture of Al-CFRP Hybrid Joints</h3>
+        <p>Assessed fracture toughness of aluminium&ndash;CFRP joints with etched and boehmite-treated surfaces and through-thickness pins. Fabricated specimens, tested them with End Notched Flexure and validated with ABAQUS. Optimised treatments improved delamination resistance.</p>
+        <div class="chips"><span class="chip">CFRP</span><span class="chip">ENF testing</span><span class="chip">ABAQUS</span></div>
+      </article>
+      <article class="card">
+        <div class="label">Formula Student</div>
+        <h3>Formula Student Composite Components</h3>
+        <p>Design and manufacture CFRP parts for the car, modelling in CAD with manufacturability and lay-up strategy in mind. Support layup, vacuum bagging, trimming and inspection with the design, chassis and aero teams.</p>
+        <div class="chips"><span class="chip">CFRP</span><span class="chip">CAD</span><span class="chip">Quality control</span></div>
+      </article>
+      <article class="card">
+        <div class="label">MSc &middot; Electric Vehicles</div>
+        <h3>Battery Management &amp; Charger Circuit</h3>
+        <p>Simulated LED-clamped capacitor balancing in Multisim, working through convergence errors on large capacitor circuits, then analysed why a real BMS is needed. Built a constant-current charger, traced lost current control to the op-amp's drive limit and fixed it with a TIP127 Darlington. Proposed an SMPS buck converter and NTC thermal shutdown.</p>
+        <div class="chips"><span class="chip">Cell balancing</span><span class="chip">Multisim</span><span class="chip">Charger design</span></div>
+      </article>
+      <article class="card">
+        <div class="label">MSc &middot; Group Project</div>
+        <h3>EV Battery Enclosure in Flax&ndash;CFRP</h3>
+        <p>Calculated bolt stresses using shear flow theory and sized adhesive joints for a flax and flax&ndash;CFRP hybrid enclosure, comparing reversible epoxy and structural acrylic (MMA) for the latch components.</p>
+        <div class="chips"><span class="chip">Composites</span><span class="chip">Bolted joints</span><span class="chip">Adhesives</span></div>
+      </article>
+      <article class="card">
+        <div class="label">MSc &middot; ENGR7004</div>
+        <h3>Crash Modelling of a Carbon&ndash;Flax EV Battery Enclosure</h3>
+        <p>Explicit LS-DYNA model of a 2.1&nbsp;m hybrid carbon&ndash;flax enclosure under 1,300&nbsp;kg, 13.86&nbsp;m/s front and side impacts against a 5&nbsp;mm deflection limit. Unprotected it deflected 209&nbsp;mm (front) and 104.6&nbsp;mm (side). I screened five attenuator concepts and simulated an aramid honeycomb in both load cases, bringing deflection inside the limit in the model.</p>
+        <div class="chips"><span class="chip">LS-DYNA</span><span class="chip">HyperMesh</span><span class="chip">Crashworthiness</span></div>
+      </article>
+      <article class="card">
+        <div class="label">BEng &amp; MSc &middot; Coursework</div>
+        <h3>CFD &amp; Aerodynamics Analysis</h3>
+        <p>CFD and aerodynamics analysis in STAR-CCM+ and ANSYS, used across my BEng and MSc coursework from first year through to master's level.</p>
+        <div class="chips"><span class="chip">STAR-CCM+</span><span class="chip">ANSYS</span><span class="chip">CFD</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <div class="wrap">
+    <div class="sh"><span class="n">04</span><h2>Experience</h2></div>
+    <div class="xps">
+
+      <article class="xp full">
+        <div class="logo"><img src="assets/logos/bmw.png" alt="BMW Group logo" data-remote="https://upload.wikimedia.org/wikipedia/commons/f/f4/BMW_logo_%28gray%29.svg" onerror="logoFail(this)"><span>BMW</span></div>
+        <h3>Maintenance Planning Intern</h3>
+        <div class="co">BMW Group (Work Placement)</div>
+        <div class="when">Jul 2023 &ndash; Aug 2024 &middot; Swindon / Oxford, UK</div>
+        <ul>
+          <li>Developed and maintained Power BI dashboards for site-wide maintenance planning, improving visibility of KPIs and maintenance status across the plant.</li>
+          <li>Co-led a tool room refurbishment, restoring press equipment and establishing new maintenance protocols to support reliable production.</li>
+          <li>Coordinated across departments to improve communication and reduce unplanned downtime.</li>
+          <li>Applied a data-led approach, using KPI tracking and root-cause thinking to inform maintenance decisions rather than relying on reactive fixes.</li>
+          <li>Gained direct exposure to plant operations, logistics and reliability engineering.</li>
+        </ul>
+      </article>
+
+      <article class="xp">
+        <div class="logo"><img src="assets/logos/northumbria.png" alt="Northumbria University logo" data-remote="https://www.northumbria.ac.uk/-/media/general-university/logos/opengraph_logo.png" onerror="logoFail(this)"><span>NU</span></div>
+        <h3>Event Representative</h3>
+        <div class="co">Northumbria University</div>
+        <div class="when">Jan 2022 &ndash; May 2025</div>
+        <ul>
+          <li>Student ambassador for the Automotive Engineering department, delivering talks and campus tours for prospective students and offer holders.</li>
+        </ul>
+      </article>
+
+      <article class="xp">
+        <div class="logo"><img src="assets/logos/nandos.png" alt="Nando's logo" data-remote="https://upload.wikimedia.org/wikipedia/en/c/c5/Nandos_logo.svg" onerror="logoFail(this)"><span>N</span></div>
+        <h3>Restaurant Team Member</h3>
+        <div class="co">Nando's, Bicester</div>
+        <div class="when">Sep 2025 &ndash; Present</div>
+        <ul>
+          <li>Customer service in a fast-paced environment, building time management and multitasking under pressure.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="education" class="reveal">
+  <div class="wrap">
+    <div class="sh"><span class="n">05</span><h2>Education</h2></div>
+    <div class="edus">
+
+      <article class="edu">
+        <div class="logo"><img src="assets/logos/brookes.png" alt="Oxford Brookes University logo" data-remote="https://upload.wikimedia.org/wikipedia/commons/a/a6/Oxford_Brookes_University_logo.svg" onerror="logoFail(this)"><span>OBU</span></div>
+        <h3>MSc Automotive Engineering (Electric Vehicles)</h3>
+        <div class="inst">Oxford Brookes University</div>
+        <div class="when">09 / 2025 &mdash; Present</div>
+        <div class="estats">
+          <div><div class="label">Status</div><div class="v g">In progress</div></div>
+          <div><div class="label">Dissertation</div><div class="v">Mixed-mode fracture</div></div>
+        </div>
+      </article>
+
+      <article class="edu">
+        <div class="logo"><img src="assets/logos/northumbria.png" alt="Northumbria University logo" data-remote="https://www.northumbria.ac.uk/-/media/general-university/logos/opengraph_logo.png" onerror="logoFail(this)"><span>NU</span></div>
+        <h3>BEng (Hons) Automotive Engineering</h3>
+        <div class="inst">Northumbria University</div>
+        <div class="when">09 / 2021 &mdash; 06 / 2025</div>
+        <div class="estats">
+          <div><div class="label">Classification</div><div class="v g">2:1</div></div>
+          <div><div class="label">Final grade</div><div class="v">66%</div></div>
+          <div><div class="label">Final project</div><div class="v">Mode II fracture</div></div>
+        </div>
+      </article>
+
+    </div>
+    <p class="enote">Mechanical Engineering Foundation Year, Northumbria University (2020&ndash;21). IGCSEs at El-Rowad College, Cairo (2018&ndash;20), including an A in Additional Maths.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact reveal">
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Let&rsquo;s build something <em>precise</em>.</h2>
+    <a class="mail" href="mailto:marwannzayed@gmail.com">marwannzayed@gmail.com</a>
+    <div class="cta">
+      <a class="pill-btn line" href="https://linkedin.com/in/marwan-zayed-b208a0258" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="pill-btn line" href="mailto:marwannzayed@gmail.com">Email</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Marwan Zayed</span>
+    <span>Automotive &middot; Manufacturing &middot; Composites</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var yr=document.getElementById('year'); if(yr) yr.textContent=new Date().getFullYear();
+
+  var menu=document.getElementById('menu'), nav=document.getElementById('nav');
+  menu.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    menu.setAttribute('aria-expanded',open);
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}
+  });
+
+  var items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
+    },{threshold:.08});
+    items.forEach(function(el){io.observe(el);});
+  } else { items.forEach(function(el){el.classList.add('in');}); }
+
+  var links=document.querySelectorAll('nav a'), secs=[];
+  links.forEach(function(a){var s=document.querySelector(a.getAttribute('href')); if(s) secs.push([a,s]);});
+  function spy(){
+    var y=window.scrollY+140, cur=null;
+    secs.forEach(function(p){ if(p[1].offsetTop<=y) cur=p[0]; });
+    links.forEach(function(a){a.classList.toggle('active',a===cur);});
+  }
+  window.addEventListener('scroll',spy,{passive:true}); spy();
+
+  var g=document.getElementById('gallery');
+  if(g){
+    var th=g.parentNode;
+    window.addEventListener('load',function(){ if(g.querySelectorAll('img').length>1) th.classList.add('gallery-on'); });
+    th.addEventListener('click',function(e){
+      var b=e.target.closest('.gal-btn'); if(!b) return;
+      g.scrollBy({left:(b.classList.contains('next')?1:-1)*g.clientWidth,behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+</html>
